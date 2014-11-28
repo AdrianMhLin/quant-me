@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   post '/login' => 'session#create'
   delete '/session' => 'session#destroy'
 
+  get '/calendar' => 'home#calendar'
+  get '/stats' => 'home#stats'
+
 #                     Prefix Verb   URI Pattern                                                        Controller#Action
 #    user_category_entries GET    /users/:user_id/categories/:category_id/entries(.:format)          entries#index
 #                          POST   /users/:user_id/categories/:category_id/entries(.:format)          entries#create

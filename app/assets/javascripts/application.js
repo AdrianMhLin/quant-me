@@ -12,5 +12,17 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
+//= require ./library/underscore
+//= require ./library/backbone
+//= require ./library/bootstrap_js
+
+//= require ./backbone/categories/CategoryCollection
+//= require ./backbone/categories/CategoryListView
+//= require ./backbone/categories/CategoryModel
+//= require ./backbone/categories/CategoryView
+
+
+
 //= require turbolinks
-//= require_tree .
+// require_tree .

@@ -1,0 +1,30 @@
+<nav>
+  <ul class="nav nav-tabs">
+    <%if session[:user_id]%>
+      <li role="presentation"><a href="/users/<%=session[:user_id]%>">Add</a></li>
+    <%else%>
+      <li role="presentation"><a href="/">Home</a></li>
+    <%end%>
+    <li role="presentation"><a href="/calendar">Calendar</a></li>
+    <li role="presentation"><a href="/stats">Stats</a></li>
+
+    <li><a href="/sign_up"> Sign Up</a></li>
+    <%if session[:user_id] %>
+      <li><form action="/session" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <input name="authenticity_token" value="<%= form_authenticity_token() %>" type="hidden">
+        <button>Log out!</button>
+      </form></li>
+
+    <%else%>
+      <li><form action="/login" method="POST">
+        <input type="text" name="email" placeholder="Email">
+        <input type="password" name="password" placeholder="Password">
+
+        <input name="authenticity_token" value="<%= form_authenticity_token() %>" type="hidden">
+
+        <button>Log in!</button>
+      </form></li>
+    <%end%>
+  </ul>
+</nav>

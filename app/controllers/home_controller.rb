@@ -6,4 +6,13 @@ class HomeController < ApplicationController
   def sign_up
     render :sign_up
   end
+
+  def calendar
+    render :calendar
+  end
+
+  def stats
+    render :stats
+  end
+
 end

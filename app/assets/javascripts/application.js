@@ -21,6 +21,7 @@
 //= require ./backbone/categories/CategoryListView
 //= require ./backbone/categories/CategoryModel
 //= require ./backbone/categories/CategoryView
+//= require ./app
 
 
 

@@ -1,5 +1,6 @@
 <h1> Hello, <%=user.username%>! </h1>
 <h3> <%=user.email%></h3>
+<input type="hidden" id="current-user-id" value="<%=user.id%>">
 
 
 <article id="category-selection">
@@ -14,4 +15,6 @@
     <input type="text" name="icon_color" placeholder="hexcode for icon">
     <button id="category-selection-button">New Category</button>
   </form>
+
+
 </article>

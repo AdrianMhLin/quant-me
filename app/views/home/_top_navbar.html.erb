@@ -1,7 +1,7 @@
 <nav>
   <ul class="nav nav-tabs">
     <%if session[:user_id]%>
-      <li role="presentation"><a href="/users/<%=session[:user_id]%>">Add</a></li>
+      <li role="presentation"><a href="/users/<%=session[:user_id]%>">Profile</a></li>
     <%else%>
       <li role="presentation"><a href="/">Home</a></li>
     <%end%>

@@ -2,6 +2,7 @@ var Quantme = Quantme || { Models: {}, Collections: {}, Views: {} };
 
 Quantme.Views.CategoryListView = Backbone.View.extend({
 	initialize: function(){
+		console.log('new Category List View initialised!');
 		this.listenTo(this.collection, 'add', this.render);
 		this.listenTo(this.collection, 'change', this.render);
 	},

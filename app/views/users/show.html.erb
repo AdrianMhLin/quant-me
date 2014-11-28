@@ -3,7 +3,15 @@
 
 
 <article id="category-selection">
-  <ul id="category-selection-list"></ul>
+  <!-- {{NOTE}} remember to insert listview here -->
 
-  <button id="category-selection-button">New Category</button>
+
+  <!-- new category -->
+  <form action="/users/<%=user.id%>/categories" method="POST">
+    <input name="authenticity_token" value="<%= form_authenticity_token() %>" type="hidden">
+    <input type="text" name="name" placeholder="Category name">
+    <input type="text" name="icon_image" placeholder="custom icon url">
+    <input type="text" name="icon_color" placeholder="hexcode for icon">
+    <button id="category-selection-button">New Category</button>
+  </form>
 </article>

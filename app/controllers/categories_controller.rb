@@ -24,17 +24,20 @@ class CategoriesController < ApplicationController
   # POST /categories
   # POST /categories.json
   def create
-    @category = Category.new(category_params)
+    # binding.pry
+    category = Category.create(
+      user_id: params['user_id'],
+      name: params['name'],
+      icon_image: params['icon_image'],
+      icon_color: params['icon_color']
+    )
 
-    respond_to do |format|
-      if @category.save
-        format.html { redirect_to @category, notice: 'Category was successfully created.' }
-        format.json { render :show, status: :created, location: @category }
-      else
-        format.html { render :new }
-        format.json { render json: @category.errors, status: :unprocessable_entity }
-      end
-    end
+    #return data
+    # respond_to do |format|
+    #   format.json { render :json => category }
+    # end
+
+    redirect_to '/'
   end
 
   # PATCH/PUT /categories/1
